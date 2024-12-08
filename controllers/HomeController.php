@@ -3,10 +3,9 @@ require_once './models/News.php';
 
 class HomeController {
     public function index() {
-        // Hiển thị trang chủ với danh sách các bài viết
         $newsModel = new News();
-        $latestNews = $newsModel->getLatestNews(5); // 5 tin mới nhất
-
+        $latestNews = $newsModel->getLatestNews(5); 
+        $newsList = $newsModel->getAllNews();
         
 
 }

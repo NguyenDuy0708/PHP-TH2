@@ -5,6 +5,11 @@ class News {
     public function __construct() {
         $this->db = new Database();
     }
+    public function getAllNews() {
+        $stmt = $this->db->getCon()->prepare("SELECT * FROM news");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function getNewsById($id) {
         $query = "SELECT news.id, news.title, news.content, news.image, news.created_at, categories.name AS category
                   FROM news
