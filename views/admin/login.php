@@ -105,7 +105,7 @@ input:focus {
         </div>
         <div class="form-section">
             <h1>TLUNews</h1>
-            <form action="/admin/login" method="POST">
+            <form action="views\admin\login.php" method="POST">
                 <div class="input-group">
                     <input type="text" name="username" placeholder="user name" required>
                 </div>
