@@ -6,7 +6,6 @@ class AdminController {
         $this->userModel = new User();
     }
     public function login() {
-        // Kiểm tra nếu form được gửi
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
