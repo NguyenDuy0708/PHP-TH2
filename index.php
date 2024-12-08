@@ -29,3 +29,8 @@ if (file_exists($controllerFile)) {
     }
 } else {
     echo "File controller <b>$controllerFile</b> không tồn tại!";}
+require_once "controllers/" . ucfirst($controller) . "Controller.php";
+
+$controllerClass = ucfirst($controller) . "Controller";
+$controllerObject = new $controllerClass();
+$controllerObject->$action();
