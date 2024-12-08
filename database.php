@@ -4,7 +4,7 @@
   	private $server = 'localhost';
 		private $username = 'root';
 		private $password = ''; // $password = '';
-		private $database = '19php01_mvc_basic';
+		
 
 		protected function connect() {
 			// thuc hien ket noi database
